@@ -11,7 +11,7 @@ public class Hello {
 	@GET
 	@Produces(MediaType.TEXT_PLAIN)
 	public String plainTextHello(){
-		return "Hello ! Jersey";
+		return "Hello ! Jersey Working";
 	}
 	
 	
