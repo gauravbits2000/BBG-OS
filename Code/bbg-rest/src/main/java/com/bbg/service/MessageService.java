@@ -8,13 +8,14 @@ import java.util.Map;
 
 import com.bbg.model.Message;
 
-public class MessageService {
-
+public class MessageService 
+{
 	private static Map<Long, Message> messages = new HashMap<Long, Message>();
 	
-	public MessageService(){
-		messages.put(1L, new Message(1L, "Hello Jersey",  "parag.garg"));
-		messages.put(2L, new Message(2L, "Hello World",  "parag.garg"));
+	public MessageService()
+	{
+		messages.put(1L, new Message(1L, "Hello Jersey",  "Gaurav"));
+		messages.put(2L, new Message(2L, "Hello World",  "Gaurav"));
 	}
 	
 	
@@ -27,7 +28,8 @@ public class MessageService {
 	}
 	
 	
-	public Message addMessage(Message message){
+	public Message addMessage(Message message)
+	{
 		message.setId((long)messages.size() + 1 );
 		messages.put(message.getId(), message);
 		return message;
@@ -41,7 +43,8 @@ public class MessageService {
 		messages.put(message.getId(), message);
 	}
 	
-	public List<Message> getMessagesForYear(int year){
+	public List<Message> getMessagesForYear(int year)
+	{
 		List<Message> messageList = new ArrayList<>();
 		Calendar cal = Calendar.getInstance();
 		for(Message message : messages.values()){
@@ -53,7 +56,8 @@ public class MessageService {
 		return messageList;
 	}
 	
-	public List<Message> getMessagesForPagination(int start , int size){
+	public List<Message> getMessagesForPagination(int start , int size)
+	{
 	 return new ArrayList<>(messages.values()).subList(start, start + size);
 	}	
 	
