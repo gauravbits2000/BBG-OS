@@ -17,9 +17,9 @@ import com.bbg.model.Message;
 import com.bbg.service.MessageService;
 
 
-
 @Path("/messages")
-public class MessageResource {
+public class MessageResource 
+{
 
 	private MessageService service = new MessageService();
 	

@@ -7,19 +7,21 @@ import javax.ws.rs.core.MediaType;
 
 /**
  * Root resource (exposed at "myresource" path)
+ * Defines the methods for a web service
  */
 @Path("myresource")
-public class MyResource {
-
+public class MyResource 
+{
     /**
      * Method handling HTTP GET requests. The returned object will be sent
      * to the client as "text/plain" media type.
      *
-     * @return String that will be returned as a text/plain response.
+     * @return String http://localhost:8080/bbgApp/myresource
      */
     @GET
     @Produces(MediaType.TEXT_PLAIN)
-    public String getIt() {
-        return "Got it!";
+    public String getIt() 
+    {
+        return "Successfull!";
     }
 }
